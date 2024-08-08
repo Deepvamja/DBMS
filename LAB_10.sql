@@ -34,7 +34,8 @@ AS SELECT NAME,BRANCH,SPI FROM STUDENT_INFO
 CREATE VIEW AcademicData 
 AS SELECT RNO,NAME,BRANCH FROM STUDENT_INFO
 
---4) Create a view Student_ bklog having all columns but students whose bklog more than 2.
+--4) Create a view Student_ bklog having all columns but students whose bklog more than 2.
+
 CREATE VIEW STUDENT_BKLOG 
 AS SELECT * FROM STUDENT_INFO 
 WHERE BKLOG>2
@@ -49,18 +50,21 @@ WHERE NAME LIKE '____'
 
 INSERT INTO AcademicData VALUES (107,'MEET','ME')
 
---7) Update the branch of Amit from CE to ME in Student_Details view.
+--7) Update the branch of Amit from CE to ME in Student_Details view.
+
 UPDATE STUDENT_DETAILS 
 SET BRANCH='ME'
 WHERE NAME='AMIT'
 
---8) Delete a student whose roll number is 104 from AcademicData view.
+--8) Delete a student whose roll number is 104 from AcademicData view.
+
 DELETE FROM AcademicData
 WHERE RNO=104
 
 --PART-B---
 
---1) Create a view that displays information of all students whose SPI is above 8.5
+--1) Create a view that displays information of all students whose SPI is above 8.5
+
 CREATE VIEW SPI
 AS SELECT *FROM STUDENT_INFO 
 WHERE SPI>8.5
@@ -91,11 +95,12 @@ UPDATE RESULT_EC
 SET SPI=4.90
 WHERE NAME='MAHESH'
 
---3) Create a view Stu_Bklog with RNo, Name and Bklog columns in which name starts with ‘M’ and having bklogs more than 5.
+--3) Create a view Stu_Bklog with RNo, Name and Bklog columns in which name starts with â€˜Mâ€™ and having bklogs more than 5.
 CREATE VIEW STU_BKLOG 
 AS SELECT RNO,NAME,BKLOG FROM STUDENT_INFO
 WHERE NAME LIKE 'M%' AND BKLOG>5
 
---4) Drop Computerview form the database.
+--4) Drop Computerview form the database.
+
 DROP VIEW COMPUTERVIEW
 
