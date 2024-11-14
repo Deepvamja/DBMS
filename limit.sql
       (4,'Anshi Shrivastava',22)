@@ -1,0 +1,28 @@
+CREATE TABLE student (
+  id INT PRIMARY KEY,
+  name VARCHAR(50),
+  age INT
+);
+
+INSERT INTO student (id, name, age)
+VALUES (1, 'Shubham Thakur', 18),
+       (2, 'Aman Chopra', 19),
+       (3, 'Bhavika uppala', 20),
+       (4,'Anshi Shrivastava',22);
+
+
+SELECT * FROM student 
+LIMIT 3;
+
+
+SELECT * FROM Student
+ORDER BY Grade DESC
+LIMIT 3;
+
+
+SELECT * FROM Student 
+ORDER BY ROLLNO LIMIT 2,5;
+
+
+SELECT age FROM Student  
+ORDER BY age LIMIT 2, 1;
